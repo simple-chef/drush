@@ -17,3 +17,28 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
+
+git node['simple-drush']['source-path'] do
+  repository "https://github.com/drush-ops/drush.git"
+  revision ['simple-drush']['source-path']
+  action :sync
+end
+
+link "/usr/bin/drush" do
+  to node['simple-drush']['source-path']
+end
+
+%w[/etc/drush /etc/drush/aliases.d ].each do |path|
+    directory path do
+      owner root
+      group root
+    end
+end
+
+bash "finish_drush" do
+  code <<-EOH
+  cd node['simple-drush']['source-path']
+  composer install
+  drush --version
+  EOH
+end

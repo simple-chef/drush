@@ -1,6 +1,6 @@
 simple-drush Cookbook
 =====================
-Simple system wide drush installation from git.
+A Chef cookbook for simple system wide drush installation from git.
 
 
 Requirements
@@ -22,7 +22,13 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['simple-drush']['drush-path']</tt></td>
+    <td><tt>['simple-drush']['source-path']</tt></td>
+    <td>String</td>
+    <td>Where drush code will be placed</td>
+    <td><tt>/</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['simple-drush']['release']</tt></td>
     <td>String</td>
     <td>Where drush code will be placed</td>
     <td><tt>/</tt></td>
@@ -54,6 +60,11 @@ Contributing
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github
+
+ToDo
+---
+
+
 
 License and Authors
 -------------------
