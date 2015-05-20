@@ -20,7 +20,7 @@
 
 git node['simple-drush']['source-path'] do
   repository "https://github.com/drush-ops/drush.git"
-  revision ['simple-drush']['source-path']
+  revision node['simple-drush']['release']
   action :sync
 end
 
