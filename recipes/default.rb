@@ -25,7 +25,7 @@ git node['simple-drush']['source-path'] do
 end
 
 link "/usr/bin/drush" do
-  to node['simple-drush']['source-path']
+  to node['simple-drush']['source-path']"/drush"
 end
 
 %w[/etc/drush /etc/drush/aliases.d ].each do |path|
