@@ -30,8 +30,8 @@ end
 
 %w[/etc/drush /etc/drush/aliases.d ].each do |path|
     directory path do
-      owner root
-      group root
+        owner 'root'
+        group 'root'
     end
 end
 
