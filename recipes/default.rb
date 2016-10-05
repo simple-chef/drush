@@ -20,7 +20,7 @@
 
 
 remote_file node['simple-drush']['source-path'] do
-  source "https://github.com/drush-ops/drush/releases/download/node['simple-drush']['release']/drush.phar"
+  source "https://github.com/drush-ops/drush/releases/download/#{node['simple-drush']['release']}/drush.phar"
   mode '0755'
 end
 
