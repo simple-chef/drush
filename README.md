@@ -1,15 +1,13 @@
-simple-drush Cookbook
+simple-chef drush Cookbook
 =====================
-A Chef cookbook for simple system wide (all projects, all users) drush installation from git, according to the [documentation](http://docs.drush.org/en/master/install/#composer-one-drush-for-all-projects).
-
+A Chef cookbook for simple drush installation (system wide all projects, all users) from packaged drush,
+ according to the [documentation](http://docs.drush.org/en/master/install/).
 
 Requirements
 ------------
 #### OS
-- linux (thus far tested only on Ubuntu 14.4)
+- linux (tested only on Ubuntu 14.4, 15)
 
-#### cookbooks
-- `composer` - a dependency for drush not installed nor required by this.
 
 Attributes
 ----------
@@ -24,7 +22,7 @@ Attributes
   <tr>
     <td><tt>['simple-drush']['source-path']</tt></td>
     <td>String</td>
-    <td>Where drush code will be placed</td>
+    <td>Where drush will be placed</td>
     <td><tt>/</tt></td>
   </tr>
   <tr>
